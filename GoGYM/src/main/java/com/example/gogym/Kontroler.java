@@ -17,16 +17,6 @@ public class Kontroler {
         this.primaryStage = primaryStage;
     }
 
-    private void setNewScene(String fxmlResource) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlResource));
-            Parent root = loader.load();
-            primaryStage.getScene().setRoot(root);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     @FXML
     private void pRozpocznijTrening(ActionEvent event) {
         try {
