@@ -3,30 +3,37 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gogym.Kontroler">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <Label fx:id="infoLabel" text="Wprowadź dane treningowe">
+      <font>
+         <Font size="11.0" />
+      </font></Label>
 
     <Label fx:id="welcomeText" text="GoGYM" />
-   <Label text="MARTWY CIAG" />
-    <TextField text="AKTUALNY CIĘŻAR" />
-    <TextField text="ILOSC POWTORZEN " />
-    <Label text="NUMER SERII:&#10;AKTUALNA OBJETOŚĆ TRENINGOWA:&#10;" />
+    <Label text="MARTWY CIAG" />
+    <TextField fx:id="aktualnyCiezarField" promptText="AKTUALNY CIĘŻAR" />
+    <TextField fx:id="iloscPowtorzenField" promptText="ILOSC POWTORZEN " />
+    <Label fx:id="numerSeriiLabel" text="NUMER SERII: 1&#10;AKTUALNA OBJETOŚĆ TRENINGOWA: 0&#10;" />
     <HBox alignment="CENTER">
         <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
         </padding>
         <children>
-            <Button mnemonicParsing="false" onAction="#pMartwyCiag" text="CWICZĘ DALEJ">
+            <Button mnemonicParsing="false" onAction="#MartwyCiag" text="CWICZĘ DALEJ">
                 <HBox.margin>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                </HBox.margin></Button>
+                </HBox.margin>
+            </Button>
             <Button mnemonicParsing="false" onAction="#pRozpocznijTrening" text="ZMIENIAM CWICZENIE">
                 <HBox.margin>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                </HBox.margin></Button>
+                </HBox.margin>
+            </Button>
         </children>
     </HBox>
 </VBox>

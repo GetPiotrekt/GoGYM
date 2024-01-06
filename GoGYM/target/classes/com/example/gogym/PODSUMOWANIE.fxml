@@ -11,6 +11,6 @@
 
     <Label fx:id="welcomeText" text="GoGYM" />
    <Label text="GRATULACJE!" />
-   <Label text="Podczas treningu wycisnąłeś:" />
+   <Label text="To był niby dobry trening, ale...&#10;Pudzian by to samo zrobił 4x szybciej" textAlignment="CENTER" />
     <Button mnemonicParsing="false" onAction="#pEkranStartowy" text="POWRÓT DO EKRANU GŁOWNEGO" />
 </VBox>

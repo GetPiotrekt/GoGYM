@@ -15,15 +15,12 @@ public class Aplikacja extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        this.primaryStage = primaryStage;
+        Aplikacja.primaryStage = primaryStage;
         primaryStage.setWidth(360);
         primaryStage.setHeight(640);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("EKRAN_STARTOWY.fxml"));
         Parent root = loader.load();
-
-        Kontroler controller = loader.getController();
-        controller.setAplikacja(this);
 
         primaryStage.setTitle("Okno Główne");
         primaryStage.setScene(new Scene(root));

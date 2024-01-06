@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gogym.Kontroler">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="GoGYM" />
+    <Label text="KALKULATOR BMR" />
+    <HBox alignment="CENTER" prefHeight="1.0" prefWidth="312.0">
+        <children>
+            <RadioButton fx:id="mezczyznaRadioButton" mnemonicParsing="false" onAction="#handleGenderSelection" text="Mężczyzna">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="kobietaRadioButton" mnemonicParsing="false" onAction="#handleGenderSelection" text="Kobieta">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+            </RadioButton>
+        </children>
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </HBox>
+    <TextField fx:id="aktualnaWagaField" promptText="AKTUALNA WAGA (kg)" />
+    <TextField fx:id="aktualnyWzrostField" promptText="AKTUALNY WZROST (cm)" />
+    <TextField fx:id="wiekField" promptText="WIEK" />
+   <Label alignment="CENTER" contentDisplay="CENTER" text="WYBIERZ STOPIEŃ AKTYWOŚCI" textAlignment="CENTER" />
+    <ChoiceBox fx:id="aktywnoscChoiceBox">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Brak aktywności fizycznej" />
+                <String fx:value="Niska aktywność (ćwiczenia 1-3 razy w tygodniu)" />
+                <String fx:value="Średnia aktywność (ćwiczenia 3-5 razy w tygodniu)" />
+                <String fx:value="Wysoka aktywność (ćwiczenia codziennie)" />
+                <String fx:value="Bardzo wysoka aktywność (ćwiczenia kilka razy dziennie)" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="331.0">
+      <children>
+          <Button mnemonicParsing="false" onAction="#ObliczBMR" text="OBLICZ">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#pEkranStartowy" text="COFNIJ">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" />
+</VBox>

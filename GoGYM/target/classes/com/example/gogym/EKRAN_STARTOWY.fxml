@@ -12,4 +12,5 @@
     <Label fx:id="welcomeText" text="GoGYM" />
     <Button onAction="#pRozpocznijTrening" text="ROZPOCZNIJ TRENING" />
    <Button mnemonicParsing="false" onAction="#pHistoriaTreningow" text="HISTORIA TRENINGÓW" />
+   <Button mnemonicParsing="false" onAction="#pKalkulatorBMR" text="KALKULATOR BMR" />
 </VBox>

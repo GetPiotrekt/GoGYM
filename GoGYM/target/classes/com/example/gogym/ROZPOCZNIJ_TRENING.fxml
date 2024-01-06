@@ -10,7 +10,7 @@
     </padding>
 
     <Label fx:id="welcomeText" text="GoGYM" />
-    <Button onAction="#pLawkaPlaska" text="ŁAWKA PŁASKA" />
+    <Button mnemonicParsing="false" onAction="#pLawkaPlaska" text="ŁAWKA PŁASKA" />
     <Button mnemonicParsing="false" onAction="#pMartwyCiag" text="MARTWY CIĄG" />
     <Button mnemonicParsing="false" onAction="#pPodciaganie" text="PODCIĄGANIE" />
    <Button mnemonicParsing="false" onAction="#pPodsumowanie" text="KONIEC TRENINGU" />
