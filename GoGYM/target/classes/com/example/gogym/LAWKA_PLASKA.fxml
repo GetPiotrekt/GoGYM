@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-      fx:controller="com.example.gogym.Kontroler">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-    <Label fx:id="infoLabel" alignment="CENTER" text="Wprowadź dane treningowe" textAlignment="CENTER">
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gogym.Kontroler">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label fx:id="welcomeText" text="GoGYM" />
+    <Label text="WYCISKANIE NA ŁAWCE PŁASKIEJ" />
+
+    <Label fx:id="infoLabel" alignment="CENTER" text="Wprowadź dane treningowe:" textAlignment="CENTER">
         <font>
-            <Font size="11.0"/>
+            <Font size="11.0" />
         </font>
     </Label>
-    <Label fx:id="welcomeText" text="GoGYM"/>
-    <Label text="ŁAWKA PŁASKA"/>
-    <TextField fx:id="aktualnyCiezarField" promptText="AKTUALNY CIĘŻAR"/>
-    <TextField fx:id="iloscPowtorzenField" promptText="ILOSC POWTORZEN "/>
-    <Label fx:id="numerSeriiLabel" text="NUMER SERII: 1&#10;AKTUALNA OBJETOŚĆ TRENINGOWA: 0&#10;"/>
+    <TextField fx:id="aktualnyCiezarField" promptText="AKTUALNY CIĘŻAR" />
+    <TextField fx:id="iloscPowtorzenField" promptText="ILOSC POWTORZEN " />
+    <Label fx:id="numerSeriiLabel" text="NUMER SERII: 1&#10;AKTUALNA OBJETOŚĆ TRENINGOWA: 0&#10;" />
     <HBox alignment="CENTER">
         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
         </padding>
         <children>
             <Button mnemonicParsing="false" onAction="#LawkaPlaska" text="CWICZĘ DALEJ">
                 <HBox.margin>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </HBox.margin>
             </Button>
             <Button mnemonicParsing="false" onAction="#pRozpocznijTrening" text="ZMIENIAM CWICZENIE">
                 <HBox.margin>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </HBox.margin>
             </Button>
         </children>

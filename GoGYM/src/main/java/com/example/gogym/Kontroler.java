@@ -9,6 +9,29 @@ import javafx.scene.control.TextField;
 
 public class Kontroler {
 
+    int numerSerii = 2;
+    float objetosc = 0;
+    @FXML
+    private Label infoLabel;
+    @FXML
+    private TextField aktualnaWagaField;
+    @FXML
+    private TextField aktualnyCiezarField;
+    @FXML
+    private TextField iloscPowtorzenField;
+    @FXML
+    private Label numerSeriiLabel;
+    @FXML
+    private RadioButton mezczyznaRadioButton;
+    @FXML
+    private RadioButton kobietaRadioButton;
+    @FXML
+    private TextField aktualnyWzrostField;
+    @FXML
+    private TextField wiekField;
+    @FXML
+    private ChoiceBox<String> aktywnoscChoiceBox;
+
     @FXML
     private void pRozpocznijTrening() {
         Aplikacja.zmienScene("ROZPOCZNIJ_TRENING.fxml");
@@ -48,24 +71,6 @@ public class Kontroler {
     private void pKalkulatorBMR() {
         Aplikacja.zmienScene("KALKULATOR_BMR.fxml");
     }
-
-    @FXML
-    private Label infoLabel;
-
-    @FXML
-    private TextField aktualnaWagaField;
-
-    @FXML
-    private TextField aktualnyCiezarField;
-
-    @FXML
-    private TextField iloscPowtorzenField;
-
-    @FXML
-    private Label numerSeriiLabel;
-
-    int numerSerii = 2;
-    float objetosc = 0;
 
     @FXML
     private void LawkaPlaska() {
@@ -131,21 +136,6 @@ public class Kontroler {
     }
 
     @FXML
-    private RadioButton mezczyznaRadioButton;
-
-    @FXML
-    private RadioButton kobietaRadioButton;
-
-    @FXML
-    private TextField aktualnyWzrostField;
-
-    @FXML
-    private TextField wiekField;
-
-    @FXML
-    private ChoiceBox<String> aktywnoscChoiceBox;
-
-    @FXML
     private void handleGenderSelection(ActionEvent event) {
         RadioButton selectedRadioButton = (RadioButton) event.getSource();
         mezczyznaRadioButton.setSelected(selectedRadioButton == mezczyznaRadioButton);
@@ -187,7 +177,7 @@ public class Kontroler {
             infoLabel.setText("Twoje BMR z uwzględnieniem aktywności wynosi: \n" + bmrAktywnosc);
 
         } catch (NumberFormatException e) {
-            System.out.println("Wprowadź poprawne dane liczbowe.");
+            infoLabel.setText("Wprowadź poprawne dane liczbowe.");
         } catch (Exception e) {
             e.printStackTrace();
         }

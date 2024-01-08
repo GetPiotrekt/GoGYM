@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gogym.Kontroler">
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gogym.Kontroler">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+
+    <Label fx:id="welcomeText" text="GoGYM" />
+    <Label text="PODCIĄGANIE" />
    <Label fx:id="infoLabel" text="Wprowadź dane treningowe">
       <font>
          <Font size="11.0" />
       </font></Label>
-
-    <Label fx:id="welcomeText" text="GoGYM" />
-    <Label text="PODCIĄGANIE" />
     <TextField fx:id="aktualnaWagaField" promptText="AKTUALNA WAGA" />
     <TextField fx:id="aktualnyCiezarField" promptText="DODATKOWY CIĘŻAR" />
     <TextField fx:id="iloscPowtorzenField" promptText="ILOSC POWTORZEN " />
